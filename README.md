@@ -1,9 +1,9 @@
 ![macOS Supported](https://img.shields.io/badge/macOS-Supported-blue)
 # compress-images  
-A Bash script to compress a single image (or a folder containing images) using **sips**.
+A Bash script to compress a single image or more images contained in a directory.
 
-## Compatibilità
-⚠️ Questo script è compatibile solo con **macOS** in quanto utilizza il comando `sips`, che è specifico per questo sistema operativo.
+## Compatibility
+⚠️ This script is only compatible with **macOS** as it uses the `sips` command, which is specific to this operating system.
 
 ## Installation  
 1. Clone this repository into your preferred directory (recommended: **_/usr/local/bin/_**).  
