@@ -32,18 +32,16 @@ show_help() {
     echo "  - The script creates a 'compressed' directory with subdirectories for each destination extension."
 }
 
-#!/bin/bash
-
-# Funzione per verificare se il file è un'immagine
+# Function to check if the file is an image
 is_image() {
     local file="$1"
-    mime_type=$(file --mime-type -b "$file") # Ottieni il tipo MIME del file
+    mime_type=$(file --mime-type -b "$file") # Get the MIME type of the file
     case "$mime_type" in
-        image/*)  # Se il tipo MIME è un'immagine (ad esempio image/jpeg, image/png)
-            return 0  # Il file è un'immagine
+        image/*)  # If the MIME type is an image (e.g., image/jpeg, image/png)
+            return 0  # The file is an image
             ;;
         *)
-            return 1  # Il file non è un'immagine
+            return 1  # The file is not an image
             ;;
     esac
 }
