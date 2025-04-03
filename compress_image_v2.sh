@@ -32,7 +32,21 @@ show_help() {
     echo "  - The script creates a 'compressed' directory with subdirectories for each destination extension."
 }
 
-# Check for help flag
+#!/bin/bash
+
+# Funzione per verificare se il file è un'immagine
+is_image() {
+    local file="$1"
+    mime_type=$(file --mime-type -b "$file") # Ottieni il tipo MIME del file
+    case "$mime_type" in
+        image/*)  # Se il tipo MIME è un'immagine (ad esempio image/jpeg, image/png)
+            return 0  # Il file è un'immagine
+            ;;
+        *)
+            return 1  # Il file non è un'immagine
+            ;;
+    esac
+}
 
 compress_and_save() {
 	# Source image
@@ -69,14 +83,22 @@ if [[ "$1" == "-h" || "$1" == "--help" ]]; then
 elif [ $# -gt 0 ]; then
 	if [[ -f "$1" ]]; then
 		echo "You passed a file"
-		compress_and_save $1 $2
+		if is_image "$1"; then
+			compress_and_save $1 $2
+		else
+			echo "Skipping file ${1}, it's not an image"
+		fi
 
 	elif [[ -d "$1" ]]; then
 		echo "You passed a folder"
 
 		for _file in $1*; do
 			if [[ -f "$_file" ]]; then
-				compress_and_save $_file $2
+				if is_image "$1"; then
+					compress_and_save $_file $2
+				else
+					echo "Skipping file ${_file}, it's not an image"
+				fi
 
 			else
 				echo "Skipping ${_file} as it is not a file"
