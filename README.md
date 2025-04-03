@@ -8,6 +8,9 @@ A Bash script to compress a single image or more images contained in a directory
 ## Contributing  
 Contributions are welcome! Please check our [Contributing Guidelines](CONTRIBUTING.md) before submitting changes.
 
+## Security  
+If you find a security vulnerability, please check our [Security Policy](.github/SECURITY.md) for reporting guidelines.  
+
 ## Installation  
 1. Clone this repository into your preferred directory (recommended: **_/usr/local/bin/_**).  
 2. Add an alias for the script:  
