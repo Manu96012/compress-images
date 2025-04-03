@@ -5,6 +5,9 @@ A Bash script to compress a single image or more images contained in a directory
 ## Compatibility
 ⚠️ This script is only compatible with **macOS** as it uses the `sips` command, which is specific to this operating system.
 
+## Contributing  
+Contributions are welcome! Please check our [Contributing Guidelines](CONTRIBUTING.md) before submitting changes.
+
 ## Installation  
 1. Clone this repository into your preferred directory (recommended: **_/usr/local/bin/_**).  
 2. Add an alias for the script:  
