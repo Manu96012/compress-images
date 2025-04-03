@@ -1,5 +1,3 @@
-#PULL REQUEST TEMPLATE
-
 ## Description  
 Please include a summary of the changes you have made and the related issue.  
 - Fixes # (issue)  
