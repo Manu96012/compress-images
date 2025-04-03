@@ -1,3 +1,4 @@
+![macOS Supported](https://img.shields.io/badge/macOS-Supported-blue)
 # compress-images  
 A Bash script to compress a single image (or a folder containing images) using **sips** (MacOS).  
 
